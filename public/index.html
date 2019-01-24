@@ -1,29 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Here is a simple ui to create notifications</h1>
     <div>
-        fill to form to change the notification parameters, you can also use the silent push, to not display the notification but save the information in the database.
+      fill to form to change the notification parameters, you can also use the
+      silent push, to not display the notification but save the information in
+      the database.
     </div>
 
     <form onsubmit="event.preventDefault(); sendNotification();">
-        <div>Title: <input id="notification-title" type="text" value="Notifications are Awesome! 🤩"></div>
-        <div>Body: <input id="notification-body" type="text" value="You got a new message yo! 📩"></div>
-        <div>Icon URL: <input id="notification-icon" type="text" value="/lazy-engineering-logo.png"></div>
-        <div>Delay: <input id="notification-delay" type="number" value="0"> seconds</div>
-        <div>Silent Push: <input id="notification-silent" type="checkbox" value="silent"></div>
+      <div>
+        Title:
+        <input
+          id="notification-title"
+          type="text"
+          value="Notifications are Awesome! 🤩"
+        />
+      </div>
+      <div>
+        Body:
+        <input
+          id="notification-body"
+          type="text"
+          value="You got a new message yo! 📩"
+        />
+      </div>
+      <div>
+        Icon URL:
+        <input
+          id="notification-icon"
+          type="text"
+          value="/lazy-engineering-logo.png"
+        />
+      </div>
+      <div>
+        Delay: <input id="notification-delay" type="number" value="0" /> seconds
+      </div>
+      <div>
+        Silent Push:
+        <input id="notification-silent" type="checkbox" value="silent" />
+      </div>
 
-        <button type="submit">Send a notification</button>
+      <button type="submit">Send a notification</button>
 
-        <br>
-        <p>TTL is a value in seconds that describes how long a push message is retained by the push service (by default, four weeks).</p>
-        <div>Notification Time-To-Live: <input id="notification-ttl" type="number" value="2419200"> seconds</div>
+      <br />
+      <p>
+        TTL is a value in seconds that describes how long a push message is
+        retained by the push service (by default, four weeks).
+      </p>
+      <div>
+        Notification Time-To-Live:
+        <input id="notification-ttl" type="number" value="2419200" /> seconds
+      </div>
     </form>
 
     <h3><h1>push data from indexedDB</h1></h3>
@@ -31,5 +65,5 @@
 
     <script src="./register-push.js"></script>
     <script src="./indexed-db.js"></script>
-</body>
+  </body>
 </html>
